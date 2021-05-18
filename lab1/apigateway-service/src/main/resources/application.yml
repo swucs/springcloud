@@ -10,7 +10,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://oracle-cloud1:8761/eureka
 spring:
   application:
     name: apigateway-service

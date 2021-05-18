@@ -4,8 +4,16 @@ server:
 spring:
   application:
     name: config-service
+  profiles:
+    active: native    #native file로 설정
   cloud:
     config:
       server:
+        native:
+          search-locations: file://C:\\project\\native-local-repo  #구현 안했음.
         git:
           uri: file://C:\\project\\git-local-repo
+          #remote server
+#          uri: https://github.com/swucs/springcloud
+#          username: swucs7@gmail.com
+#          password: qkrgkssk97

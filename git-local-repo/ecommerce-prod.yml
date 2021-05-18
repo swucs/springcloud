@@ -1,6 +1,0 @@
-token:
-  expiration_time: 86400000 #하루
-  secret: my_token_prod
-
-gateway:
-  ip: 127.0.0.1
