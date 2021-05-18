@@ -4,13 +4,15 @@ server:
 spring:
   application:
     name: config-service
-  profiles:
-    active: native    #native file로 설정
+# native file로 설정할 때
+#  profiles:
+#    active: native
   cloud:
     config:
       server:
-        native:
-          search-locations: file://C:\\project\\native-local-repo  #구현 안했음.
+# native file로 설정할 때
+#        native:
+#          search-locations: file://C:\\project\\native-local-repo  #구현 안했음.
         git:
           uri: file://C:\\project\\git-local-repo
           #remote server
