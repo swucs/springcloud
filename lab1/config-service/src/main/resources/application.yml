@@ -4,18 +4,31 @@ server:
 spring:
   application:
     name: config-service
+  rabbitmq:
+    host: oracle-cloud1
+    port: 5672
+    username: rabbitmq
+    password: rabbitmq
 # native file로 설정할 때
-#  profiles:
-#    active: native
+  profiles:
+    active: native
   cloud:
     config:
       server:
-# native file로 설정할 때
-#        native:
-#          search-locations: file://C:\\project\\native-local-repo  #구현 안했음.
+# native file로 설정할 때 (윈도우는 file:/// 로 시작해야함 ㅜㅜ)
+        native:
+          search-locations: file:///C:/project/springcloud/native-file-repo
+
+      #Local git
         git:
           uri: file://C:\\project\\git-local-repo
+
           #remote server
 #          uri: https://github.com/swucs/springcloud
 #          username: swucs7@gmail.com
 #          password: qkrgkssk97
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh

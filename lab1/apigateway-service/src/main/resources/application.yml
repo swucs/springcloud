@@ -14,6 +14,11 @@ eureka:
 spring:
   application:
     name: apigateway-service
+  rabbitmq:
+    host: oracle-cloud1
+    port: 5672
+    username: rabbitmq
+    password: rabbitmq
 
   cloud:
     gateway:
@@ -37,20 +42,20 @@ spring:
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
+            - Path=/user-service/actuator
+            - Method=GET,POST
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
             - Path=/user-service/**
             - Method=GET
           filters:
             - RemoveRequestHeader=Cookie
             - RewritePath=/user-service/(?<segment>.*), /$\{segment}
             - AuthorizationHeaderFilter
-        - id: user-service
-          uri: lb://USER-SERVICE
-          predicates:
-            - Path=/user-service/actuator
-            - Method=GET,POST
-          filters:
-            - RemoveRequestHeader=Cookie
-            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
         - id: catalog-service
           uri: lb://CATALOG-SERVICE
           predicates:
@@ -64,7 +69,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans, httptrace
+        include: refresh, health, beans, httptrace, busrefresh
 
-token:
-  secret: user_token
+#token:
+#  secret: user_token
