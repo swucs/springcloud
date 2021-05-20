@@ -1,6 +1,6 @@
 token:
   expiration_time: 86400000 #하루
-  secret: user_token_native_ecommerce
+  secret: '{cipher}AQCSZFc5nlnsIQ0SCL642A4PuYoZJiYHhW/mdSwMP0r4zxMTvurb2jbmhhc7w+BxJ6KOoJ342D3ZAeazpoiFyIojYNt+gGXmjxHGdVO2MhWuRxlzZ78c5IQKlgBOdCufBeO+a+EDQq5hYNWB4VDG4FvyF+cizqt11hadgHBK4VYq68seQkIzI+J+HrFexfgWwlOvVKnUcBHxriAMr6OI+PK4vIkfxvgTiAH8HMdFyA8+fLo+HtROFVGWBVp+dERy1OCswPszzYV5HfeirQDv+EDnqcGDxXsfHRqPiLXAzevTSa/onzSfSD08s/gc+vKmSgJ/aQ9tQqd+kEdEkeIotSbnx6wxKGSTiQuE1R4eKLQPxnMyZMc8yqqO0h47X2yoTA1ohDdziAe5S+c2xVw0Oh15'
 
 gateway:
   ip: 127.0.0.1

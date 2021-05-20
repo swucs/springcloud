@@ -1,6 +1,13 @@
+spring: 
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: '{cipher}AQCw5KqzjzzYZK5MFwN3/D7MOgYSIht+Gl1BRg4zAHvYlzbsZJ288mJZdC52xyGDyJGgS16ZTblDGnX98nRKs28pRhzLKSGxAMsaUUuX8oFdeJEo6BvoyhGPZDwUl8xAjAre1z+KuByf1AmNQtIvia199co1/Yn0j0Gra5NlYmlj7okarbJrnHpagzX8ueU49EWojqT+73YPKXUDJnv5ugESdAYI2WHma3THQAscXLUgBXZZDoieECGKpNENDqmq5n/xEZxs1k4sr4mWkeF98hMfYxALfduFA1Xrv80q3VLBY3gmL/3CYnGTWc7qCXst7a9FaGtgQNInv6LVu5++DmCWBzE1PItOGlwu7Dt/0baj710ItwJIAP7E3d5hIlgmOVA='
+
 token:
   expiration_time: 86400000 #하루
-  secret: user_token_native_user_service
+  secret: '{cipher}AQCSZFc5nlnsIQ0SCL642A4PuYoZJiYHhW/mdSwMP0r4zxMTvurb2jbmhhc7w+BxJ6KOoJ342D3ZAeazpoiFyIojYNt+gGXmjxHGdVO2MhWuRxlzZ78c5IQKlgBOdCufBeO+a+EDQq5hYNWB4VDG4FvyF+cizqt11hadgHBK4VYq68seQkIzI+J+HrFexfgWwlOvVKnUcBHxriAMr6OI+PK4vIkfxvgTiAH8HMdFyA8+fLo+HtROFVGWBVp+dERy1OCswPszzYV5HfeirQDv+EDnqcGDxXsfHRqPiLXAzevTSa/onzSfSD08s/gc+vKmSgJ/aQ9tQqd+kEdEkeIotSbnx6wxKGSTiQuE1R4eKLQPxnMyZMc8yqqO0h47X2yoTA1ohDdziAe5S+c2xVw0Oh15'
 
 gateway:
   ip: 127.0.0.1
