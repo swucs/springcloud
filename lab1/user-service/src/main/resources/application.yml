@@ -41,7 +41,7 @@ greeting:
 
 logging:
   level:
-    com.example.userserivce: DEBUG
+    com.example.userserivce.client: DEBUG
 #
 #token:
 #  expiration_time: 86400000  #하루
